@@ -1,0 +1,7 @@
+# No lockfile - consumers pin the flake ref
+*.lock
+
+# Build artifacts
+result*
+*.narinfo
+*.tar.xz

@@ -1,0 +1,31 @@
+{
+  config = {
+    programs = {
+      fish = {
+        enable = true;
+        interactiveShellInit = "fish_vi_cursor";
+
+        functions = {
+          fish_greeting = "";
+
+          fish_user_keybindings = ''
+            fish_default_keybindings -M insert
+            bind -M insert ctrl-p up-or-search
+            bind -M insert ctrl-n down-or-search
+          '';
+
+          ls_after_cd = {
+            onVariable = "PWD";
+            body = "la";
+          };
+        };
+      };
+
+      dircolors.enableFishIntegration = true;
+      direnv.enableFishIntegration = true;
+      starship.enableFishIntegration = true;
+      yazi.enableFishIntegration = true;
+      zoxide.enableFishIntegration = true;
+    };
+  };
+}
