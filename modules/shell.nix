@@ -2,7 +2,7 @@
 
 {
   config = {
-    shellAliases = {
+    home.shellAliases = {
       ".." = "cd ..";
       "..." = "cd ../..";
       "...." = "cd ../../..";
@@ -134,7 +134,7 @@
 
       less = {
         enable = true;
-        config = "h left-scroll\nl right-scroll";
+        config = "#command\nh left-scroll\nl right-scroll";
       };
 
       man = {

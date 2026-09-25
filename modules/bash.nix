@@ -9,6 +9,15 @@
       ".profile".enable = lib.mkForce false;
     };
 
+    # Keep the generated startup files available to the host's XDG Bash hooks.
+    xdg.configFile = {
+      "bash/bash_logout" = lib.mkIf (config.programs.bash.logoutExtra != "") {
+        source = config.home.file.".bash_logout".source;
+      };
+      "bash/bashrc".source = config.home.file.".bashrc".source;
+      "bash/profile".source = config.home.file.".profile".source;
+    };
+
     programs = {
       bash = {
         enable = true;

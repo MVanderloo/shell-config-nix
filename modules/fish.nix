@@ -9,7 +9,7 @@
           fish_greeting = "";
 
           fish_user_keybindings = ''
-            fish_default_keybindings -M insert
+            fish_default_key_bindings -M insert
             bind -M insert ctrl-p up-or-search
             bind -M insert ctrl-n down-or-search
           '';

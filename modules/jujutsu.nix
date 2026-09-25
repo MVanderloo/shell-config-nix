@@ -22,7 +22,7 @@ with lib;
       settings = {
         ui.default-command = "logstatus";
         ui.editor = "nvim";
-        git.pushNewBookmarks = true;
+        git.push-new-bookmarks = true;
         aliases = {
           accuse = [ "file" "annotate" ];
           fetch = [ "git" "fetch" ];
