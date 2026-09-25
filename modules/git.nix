@@ -15,6 +15,7 @@
 
     home.packages = with pkgs; [
       git-filter-repo
+      glab
     ];
 
     programs.delta = {
@@ -57,7 +58,6 @@
 
     programs.git = {
       enable = true;
-      extraPackages = with pkgs; [ glab ];
       ignores = [
         "*.env"
         ".DS_Store"
